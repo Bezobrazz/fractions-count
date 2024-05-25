@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './App.css';
+import {Counter} from "../src/components/Counter.jsx"
 
 function App() {
   const [counts, setCounts] = useState([0, 0, 0, 0, 0]);
   const [inputValue, setInputValue] = useState('');
+  console.log(useState)
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -38,6 +40,7 @@ function App() {
           <li key={index}>{index + 1} fraction Sum: {count}</li>
         ))}
       </ul>
+      <Counter/>
     </>
   );
 }
